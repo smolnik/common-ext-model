@@ -18,4 +18,9 @@ public class DigestResponse extends ServiceMessage {
 
     public String digest;
 
+    @Override
+    public String toString() {
+        return "DigestResponse [digest=" + digest + ", id=" + id + "]";
+    }
+
 }

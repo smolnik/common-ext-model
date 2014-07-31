@@ -10,15 +10,12 @@ public class ImportRequest extends ServiceMessage {
 
     public String srcObjectKey;
 
-    public String destObjectKey;
-
     public ImportRequest() {
 
     }
 
-    public ImportRequest(String srcObjectKey, String destObjectKey) {
+    public ImportRequest(String srcObjectKey) {
         this.srcObjectKey = srcObjectKey;
-        this.destObjectKey = destObjectKey;
     }
 
 }
