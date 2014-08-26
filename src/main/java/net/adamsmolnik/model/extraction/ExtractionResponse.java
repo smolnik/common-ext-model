@@ -9,22 +9,29 @@ import net.adamsmolnik.model.ServiceMessage;
  */
 public class ExtractionResponse extends ServiceMessage {
 
-    public List<String> objectKeys;
-
     public ExtractionStatus status;
+
+    public String extractionInfoObjectKey;
+
+    public List<String> objectKeys;
 
     public ExtractionResponse() {
 
     }
 
-    public ExtractionResponse(ExtractionStatus status, List<String> objectKeys) {
+    public ExtractionResponse(ExtractionStatus status) {
         this.status = status;
+    }
+
+    public ExtractionResponse(ExtractionStatus status, String extractionInfoObjectKey, List<String> objectKeys) {
+        this.status = status;
+        this.extractionInfoObjectKey = extractionInfoObjectKey;
         this.objectKeys = objectKeys;
     }
 
     @Override
     public String toString() {
-        return "ExtractionResponse [objectKeys=" + objectKeys + ", status=" + status + "]";
+        return "ExtractionResponse [status=" + status + ", extractionInfoObjectKey=" + extractionInfoObjectKey + ", objectKeys=" + objectKeys + "]";
     }
 
 }
